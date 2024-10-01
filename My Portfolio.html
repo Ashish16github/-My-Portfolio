@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Kushwaha - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: center;
+        }
+
+        p, ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #skills ul {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #skills ul li {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f4f4f9;
+        }
+
+        /* Button for Back to Top */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ashish Kushwaha</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Ashish Kushwaha, a third-year B.Tech computer science student with a passion for web development. I love creating beautiful and functional websites, and I'm constantly learning new technologies to improve my skills.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C & C++</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>Project 1: Portfolio Website</h3>
+        <p>A personal website to showcase my skills and projects.</p>
+        <a href="#">View Project</a>
+    </div>
+    <div class="project-card">
+        <h3>Project 2: E-commerce Website</h3>
+        <p>An online store built using HTML, CSS, and JavaScript.</p>
+        <a href="#">View Project</a>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:ashishkushwaha161202005@gmail.com">ashishkushwaha161202005@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ashish-kushwaha-65674923b/" target="_blank">My LinkedIn</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Ashish Kushwaha. All rights reserved.</p>
+</footer>
+
+<!-- Back to top button -->
+<div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+<script>
+    // Show "Back to Top" button when scrolling
+    window.onscroll = function() {
+        var btn = document.getElementById('back-to-top');
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
